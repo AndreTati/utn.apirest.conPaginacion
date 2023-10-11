@@ -45,12 +45,4 @@ public class LibroServiceImpl extends BaseServiceImpl<Libro, Long> implements Li
             throw new Exception((ex.getMessage()));
         }
     }
-    @Override
-    public Page<Libro> findAllPaged(Pageable pageable)throws Exception{
-        try{
-            return libroRepository.findAllPaged(pageable);
-        }catch(Exception ex){
-            throw new Exception((ex.getMessage()));
-        }
-    }
 }

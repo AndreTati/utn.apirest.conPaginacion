@@ -36,12 +36,4 @@ public class LibroController extends BaseControllerImpl<Libro, LibroServiceImpl>
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("{\"error\":\"Se produjo el siguiente error."+e+"\"}");
         }
     }
-    @GetMapping("/listPaginada")
-    public ResponseEntity<?> findAllPaged(Pageable pageable){
-        try{
-            return ResponseEntity.status(HttpStatus.OK).body(servicio.findAllPaged(pageable));
-        }catch(Exception e){
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("{\"error\":\"Se produjo el siguiente error."+e+"\"}");
-        }
-    }
 }

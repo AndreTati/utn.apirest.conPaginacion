@@ -22,15 +22,8 @@ public interface LibroRepository extends BaseRepository<Libro, Long> {
 
     //Native
     @Query(
-            value=
-                    "SELECT * FROM libro WHERE genero LIKE %:filtro%",
+            value="SELECT * FROM libro WHERE genero LIKE %:filtro%",
             nativeQuery = true
     )
     List<Libro>buscarPorGeneroNative(@Param("filtro")String genero);
-
-    @Query(
-            value = "SELECT * FROM libro",
-            nativeQuery = true
-    )
-    Page<Libro>findAllPaged(Pageable pageable);
 }

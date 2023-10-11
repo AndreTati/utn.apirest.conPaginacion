@@ -11,5 +11,4 @@ public interface LibroService extends BaseService<Libro, Long> {
     public List<Libro> buscarPorTituloQueryMethod(String titulo)throws Exception;
     public List<Libro> buscarPorAutorJPQL(String autor)throws Exception;
     public List<Libro> buscarPorGeneroNative(String genero)throws Exception;
-    public Page<Libro> findAllPaged(Pageable pageable)throws Exception;
 }
